@@ -39,7 +39,7 @@
             
             [Parameter(Mandatory=$False)]
             [ValidateNotNullOrEmpty()]
-            [Regex]$PackagesToRemove = '.*Xbox.*|.*Alarms.*|.*Bing.*|.*Skype.*|.*Communi.*|.*Zune.*|.*Solit.*|.*Games.*|.*3D.*|.*Camera.*|.*Phone.*|.*Soundrec.*|.*Xboxapp.*|.*Feedback.*|.*Message.*|.*Messaging.*|.*Gethelp.*|.*Mobile.*|.*Mixed.*|.*Microsoft\.MicrosoftOfficeHub.*|.*OneNote.*|.*Microsoft\.People.*|.*Windows.*Defender.*|.*Movies.*|.*Microsoft\.ZuneMusic.*|.*Microsoft\.Windows\.HolographicFirstRun.*|.*Microsoft\.Oneconnect.*|.*Microsoft\.WindowsStore.*|.*Microsoft\.Getstarted.*|.*Microsoft\.MSPaint.*|.*Microsoft\.ZuneVideo.*|.*Microsoft\.PPIProjection.*|.*Microsoft\.WindowsMaps.*',
+            [Regex]$PackagesToRemove = '.*Xbox.*|.*Alarms.*|.*Bing.*|.*Skype.*|.*Communi.*|.*Zune.*|.*Solit.*|.*Games.*|.*3D.*|.*Phone.*|.*Soundrec.*|.*Xboxapp.*|.*Feedback.*|.*Message.*|.*Messaging.*|.*Gethelp.*|.*Mobile.*|.*Mixed.*|.*Microsoft\.MicrosoftOfficeHub.*|.*OneNote.*|.*Microsoft\.People.*|.*Windows.*Defender.*|.*Movies.*|.*Microsoft\.ZuneMusic.*|.*Microsoft\.Windows\.HolographicFirstRun.*|.*Microsoft\.Oneconnect.*|.*Microsoft\.WindowsStore.*|.*Microsoft\.Getstarted.*|.*Microsoft\.MSPaint.*|.*Microsoft\.ZuneVideo.*|.*Microsoft\.PPIProjection.*|.*Microsoft\.WindowsMaps.*',
             
             [Parameter(Mandatory=$False)]
             [ValidateNotNullOrEmpty()]
@@ -228,6 +228,7 @@ ForEach ($ModuleGroup In $ModuleGroups)
                 $WarningMessage = "There is no task sequence running.`r`n"
                 Write-Warning -Message "$($WarningMessage)" -Verbose
             }
+        
         #Remove Metro Application(s)
           If ($ImagePath -ine $Null)
             {             
